@@ -1,0 +1,17 @@
+{
+	"name": "Http_Schedule",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 1,
+				"startTime": "2020-09-21T10:33:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
