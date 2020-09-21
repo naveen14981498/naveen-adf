@@ -3,14 +3,35 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Stopped",
-		"pipelines": [],
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Lego_Http_ADLS",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "inventory_minifigs.csv.gz"
+				}
+			}
+		],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
-				"frequency": "Minute",
+				"frequency": "Month",
 				"interval": 1,
 				"startTime": "2020-09-21T10:33:00.000Z",
-				"timeZone": "UTC"
+				"timeZone": "UTC",
+				"schedule": {
+					"minutes": [
+						33
+					],
+					"hours": [
+						10
+					],
+					"monthDays": [
+						21
+					]
+				}
 			}
 		}
 	}
