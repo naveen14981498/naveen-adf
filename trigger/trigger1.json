@@ -1,0 +1,28 @@
+{
+	"name": "trigger1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Lego_Http_ADLS",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"FileName": "inventory_minifigs.csv.gz"
+				}
+			}
+		],
+		"type": "BlobEventsTrigger",
+		"typeProperties": {
+			"blobPathBeginsWith": "/lego/blobs/lego",
+			"blobPathEndsWith": ".csv",
+			"ignoreEmptyBlobs": true,
+			"scope": "/subscriptions/ee803a20-00c2-4756-928c-368865170946/resourceGroups/naveentst/providers/Microsoft.Storage/storageAccounts/nveends",
+			"events": [
+				"Microsoft.Storage.BlobCreated"
+			]
+		}
+	}
+}
